@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+    <meta name="generator" content="nanoc 3.3.1">
+  </head>
+  <body>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="sidebar">
+      <h2>Pierre Legendre</h2>
+      <ul>
+        <li><a href="http://numericalecology.com/index.html">Version fran&ccedil;aise</a></li>
+        <li><a href="http://numericalecology.com/indexEn.html">English version</a></li>
+        <li><a href="http://numericalecology.com/FonctionsR/">Fonctions R</a></li>
+        <li><a href="http://numericalecology.com/Reprints/">Tir&eacute;s-&agrave;-part / Reprints</a></li>
+      </ul>
+      <h2>Cours</h2>
+      <ul>
+        <li><a href="http://numericalecology.com/BIO2041/">BIO 2041: Biostatistique I</a></li>
+        <li><a href="http://numericalecology.com/bio6077.html">BIO 6077: Analyse quantitative des donn&eacute;es biologiques</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
