@@ -25,6 +25,20 @@ compile '/Reprints/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/FonctionsR/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/Rcode/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -42,6 +56,14 @@ end
 
 route '/Reprints/' do
   '/Reprints/index.html'
+end
+
+route '/FonctionsR/' do
+  '/FonctionsR/index.html'
+end
+
+route '/Rcode/' do
+  '/Rcode/index.html'
 end
 
 route '*' do
