@@ -18,6 +18,20 @@ compile '/stylesheet/' do
   filter :relativize_paths, :type => :css
 end
 
+compile '/data/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/donnees/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
 compile '/Reprints/' do
   filter :kramdown
   layout 'default'
@@ -52,6 +66,14 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route '/data/' do
+  '/data/index.html'
+end
+
+route '/donnees/' do
+  '/donnees/index.html'
 end
 
 route '/Reprints/' do
