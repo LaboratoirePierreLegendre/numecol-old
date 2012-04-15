@@ -60,6 +60,34 @@ compile '/lex/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/cca_bib/' do
+  filter :erb
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/cca_bib/methods/' do
+  filter :erb
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/cca_bib/organisms/' do
+  filter :erb
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/cca_bib/subjects/' do
+  filter :erb
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -97,6 +125,22 @@ end
 
 route '/lex/' do
   '/lex/index.html'
+end
+
+route '/cca_bib/' do
+  '/cca_bib/index.html'
+end
+
+route '/cca_bib/methods/' do
+  '/cca_bib/methods/index.html'
+end
+
+route '/cca_bib/organisms/' do
+  '/cca_bib/organisms/index.html'
+end
+
+route '/cca_bib/subject/' do
+  '/cca_bib/subject/index.html'
 end
 
 route '*' do
