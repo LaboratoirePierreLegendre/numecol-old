@@ -18,6 +18,11 @@ compile '/stylesheet/' do
   filter :relativize_paths, :type => :css
 end
 
+compile '/build/' do
+  # don’t filter or layout
+  filter :relativize_paths, :type => :html
+end
+
 compile '/data/' do
   filter :kramdown
   layout 'default'
@@ -141,6 +146,10 @@ end
 
 route '/cca_bib/subject/' do
   '/cca_bib/subject/index.html'
+end
+
+route '/build/' do
+  '/build/index.php'
 end
 
 route '*' do
