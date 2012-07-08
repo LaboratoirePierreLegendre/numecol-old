@@ -20,7 +20,6 @@ end
 
 compile '/build/' do
   # don’t filter or layout
-  filter :relativize_paths, :type => :html
 end
 
 compile '/data/' do
@@ -149,7 +148,7 @@ route '/cca_bib/subject/' do
 end
 
 route '/build/' do
-  '/build/index.php'
+  '/build.php'
 end
 
 route '*' do
