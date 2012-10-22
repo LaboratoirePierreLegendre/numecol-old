@@ -88,6 +88,10 @@ compile '/cca_bib/subjects/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/numecolR/' do
+  # don’t filter or layout
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -141,6 +145,10 @@ end
 
 route '/cca_bib/subject/' do
   '/cca_bib/subject/index.html'
+end
+
+route '/numecolR/' do
+  '/numecolR/index.html'
 end
 
 route '*' do
