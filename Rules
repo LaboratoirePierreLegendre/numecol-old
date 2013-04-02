@@ -53,6 +53,13 @@ compile '/Rcode/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/old/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
 compile '/lex/' do
   filter :erb
   layout 'default'
@@ -92,6 +99,7 @@ compile '/numecolR/' do
   # don’t filter or layout
 end
 
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -125,6 +133,10 @@ end
 
 route '/Rcode/' do
   '/Rcode/index.html'
+end
+
+route '/old/' do
+  '/old/index.html'
 end
 
 route '/lex/' do
