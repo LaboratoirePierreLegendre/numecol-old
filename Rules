@@ -60,6 +60,34 @@ compile '/old/' do
   filter :relativize_paths, :type => :html
 end
 
+compile '/old/R/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/old/R/v3/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/old/R/v3/description/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
+compile '/old/R/v4/' do
+  filter :kramdown
+  layout 'default'
+  filter :relativize_paths, :type => :css
+  filter :relativize_paths, :type => :html
+end
+
 compile '/lex/' do
   filter :erb
   layout 'default'
@@ -137,6 +165,22 @@ end
 
 route '/old/' do
   '/old/index.html'
+end
+
+route '/old/R/' do
+  '/old/R/index.html'
+end
+
+route '/old/R/v3/' do
+  '/old/R/v3/index.html'
+end
+
+route '/old/R/v3/description/' do
+  '/old/R/v3/description/index.html'
+end
+
+route '/old/R/v4/' do
+  '/old/R/v4/index.html'
 end
 
 route '/lex/' do
