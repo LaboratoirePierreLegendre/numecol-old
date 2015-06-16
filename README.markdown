@@ -2,7 +2,3 @@ numecol: Source du site NumericalEcology.com
 ============================================
 
 Le site web http://numericalecology.com/ est programmé grâce à nanoc.
-
-
-J'ajoute une ligne,
-et une deuxième ligne.
