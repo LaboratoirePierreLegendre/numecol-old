@@ -99,3 +99,15 @@ a:hover {
 
   line-height: 20px;
 }
+
+.loadEpisodeButton {
+	width: 44px;
+	height:44px;
+	margin: 15px 0 0 -5px;
+	background: url(images/playIcon.png);
+	cursor: pointer;
+}
+
+.hiddenText {
+	display: none;
+}
